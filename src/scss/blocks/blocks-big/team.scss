@@ -1,8 +1,8 @@
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/pseudo.scss" as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
 
 .team {
-  overflow-x: hidden;
+  overflow: hidden;
   &__laptop {
     @include responsive(laptop) {
       gap: 6rem;
@@ -57,7 +57,7 @@
     &--lake {
       height: 13rem;
       width: 90%;
-      transform: scale(1.2);
+      // transform: scale(1.2);
       left: 23%;
       top: -1.5rem;
       @include responsive(tablet) {

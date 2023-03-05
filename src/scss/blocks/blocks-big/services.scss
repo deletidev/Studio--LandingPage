@@ -1,5 +1,5 @@
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/pseudo.scss" as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
 
 .services {
   --flow: 2rem;
@@ -29,7 +29,7 @@
     @include responsive(laptop) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: " one three" "two three";
+      grid-template-areas: ' one three' 'two three';
       gap: 3rem;
       align-items: center;
     }
@@ -73,7 +73,7 @@
     height: 100%;
     object-fit: cover;
     margin-left: auto;
-    transform: scale(1.2);
+    // transform: scale(1.2);
     position: relative;
     top: -25%;
     z-index: -1;
