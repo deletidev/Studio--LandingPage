@@ -57,7 +57,7 @@
     &--lake {
       height: 13rem;
       width: 90%;
-      // transform: scale(1.2);
+      transform: scale(1.2);
       left: 23%;
       top: -1.5rem;
       @include responsive(tablet) {
