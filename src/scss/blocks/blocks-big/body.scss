@@ -1,0 +1,9 @@
+@use "../../mixins/responsive.scss" as *;
+
+body {
+  margin: 0;
+  font-family: var(--ff-main);
+  font-size: var(--fs-base);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}

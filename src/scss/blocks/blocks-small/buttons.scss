@@ -1,0 +1,23 @@
+@use "../../mixins/hover.scss" as *;
+
+.button {
+  text-transform: uppercase;
+  color: var(--color-text-title);
+  border: 1px solid var(--color-text-title);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  &--primary {
+    display: block;
+    width: fit-content;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  @include hover {
+    &:hover {
+      background-color: var(--color-text-title);
+      color: var(--color-text-white);
+    }
+  }
+}

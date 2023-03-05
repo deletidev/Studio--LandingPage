@@ -1,0 +1,29 @@
+@use "../mixins/responsive.scss" as *;
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  @include responsive(laptop) {
+    flex-direction: row;
+  }
+}
+.flex-just-center {
+  justify-content: center;
+}
+.flex-just-space {
+  justify-content: space-between;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-align-left {
+  align-items: left;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-desktop {
+  @include responsive(tablet) {
+    flex-direction: row;
+  }
+}

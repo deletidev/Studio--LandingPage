@@ -1,0 +1,67 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.contact {
+  --flow: 2rem;
+  overflow: hidden;
+  &__social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 90%;
+    @include responsive(tablet) {
+      flex-direction: row;
+    }
+    @include responsive(laptop) {
+      width: 100%;
+    }
+  }
+  &__time {
+    margin-bottom: 2rem;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @include responsive(tablet) {
+      width: 40%;
+    }
+  }
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    object-fit: contain;
+  }
+  &__local {
+    margin-top: 2rem;
+    @include responsive(laptop) {
+      margin-top: 0;
+    }
+  }
+  &__image-container {
+    position: relative;
+    margin-top: 0.5rem;
+    &::before {
+      @include pseudo(35%, 95%) {
+        border: 1px solid var(--color-deco-primary);
+        z-index: -1;
+        right: -18%;
+        top: -10%;
+        @include responsive(laptop) {
+          right: 0%;
+          width: 55%;
+        }
+      }
+    }
+  }
+  &__img {
+    height: 22rem;
+    width: 100%;
+    object-fit: cover;
+    @include responsive(laptop) {
+      height: 20rem;
+      width: 90%;
+    }
+  }
+}

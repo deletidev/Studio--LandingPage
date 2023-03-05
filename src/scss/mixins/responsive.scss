@@ -1,7 +1,8 @@
 $breakpoints: (
-  tablet: 640px,
-  laptop: 1024px,
-  desktop: 1440px
+  movilbig: 500px,
+  tablet: 768px,
+  laptop: 1020px,
+  desktop: 1440px,
 );
 
 @mixin responsive($key) {
@@ -13,5 +14,11 @@ $breakpoints: (
     @media screen and (min-width: $key) {
       @content;
     }
+  }
+}
+
+@mixin minimovil {
+  @media (max-width: 330px) {
+    @content;
   }
 }

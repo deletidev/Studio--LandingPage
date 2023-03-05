@@ -1,0 +1,29 @@
+@use "../mixins/responsive.scss" as *;
+
+.title {
+  color: var(--color-text-title);
+  line-height: 1;
+}
+.title-m {
+  font-size: var(--fs-md);
+}
+.title-l {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+.title-xl {
+  font-size: var(--fs-lg);
+  letter-spacing: 1.5px;
+  font-family: var(--ff-title);
+  text-transform: uppercase;
+}
+.title-xxl {
+  font-size: var(--fs-xl);
+  letter-spacing: 1.4px;
+  font-family: var(--ff-title);
+  text-transform: uppercase;
+}
+
+.title-white {
+  color: var(--color-text-white);
+}

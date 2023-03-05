@@ -1,0 +1,54 @@
+@use "../mixins/responsive.scss" as *;
+
+.gap-s {
+  gap: 1rem;
+}
+.gap-m {
+  gap: 2rem;
+}
+.gap-l {
+  gap: 3rem;
+}
+.gap-xl {
+  gap: 4rem;
+}
+.gap-xxl {
+  gap: 5rem;
+}
+
+.padding-sections {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @include responsive(tablet) {
+    padding-bottom: 8rem;
+  }
+  @include responsive(laptop) {
+    padding-bottom: 9rem;
+  }
+}
+
+.flow > * + * {
+  padding-top: var(--flow);
+}
+
+.br {
+  display: block;
+  font-size: 0;
+}
+
+.line-height {
+  line-height: 0.95;
+}
+
+.margin-m {
+  margin-bottom: 2.5rem;
+}
+
+.max-text {
+  @include responsive(tablet) {
+    max-width: 70ch;
+  }
+  @include responsive(laptop) {
+    max-width: 200ch;
+  }
+}

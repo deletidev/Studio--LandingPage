@@ -1,5 +1,34 @@
-:root {
-  /* Variables CSS */
-}
+/* En esta carpeta puedo tener separadas las variables */
 
-/* Variables SASS */
+:root {
+  /* fuentes*/
+
+  --fs-sm: clamp(1rem, 0.06vw + 0.99rem, 1.03rem);
+  --fs-base: clamp(1.25rem, 0.22vw + 1.2rem, 1.38rem);
+  --fs-md: clamp(1.56rem, 0.48vw + 1.45rem, 1.83rem);
+  --fs-lg: clamp(1.95rem, 0.87vw + 1.75rem, 2.44rem);
+  --fs-xl: clamp(2.44rem, 1.44vw + 2.1rem, 3.26rem);
+  --fs-xxl: clamp(3.05rem, 2.28vw + 2.52rem, 4.34rem);
+  --fs-xxxl: clamp(3.81rem, 3.49vw + 3rem, 5.79rem);
+  --ff-title: "Bebas Neue", cursive;
+  --ff-main: "Source Sans Pro", sans-serif;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  /* Colores*/
+  --color-text-main: hsl(0, 0%, 35%);
+  --color-text-title: hsl(0, 0%, 5%);
+  --color-text-white: hsl(0, 0%, 99%);
+  --color-bg-primary: hsl(0, 0%, 35%);
+  --color-bg-secondary: hsl(0, 0%, 5%);
+  --color-bg-terciary: hsl(0, 0%, 99%);
+  --color-btn: hsl(0, 0%, 5%);
+  --color-menu-active: hsl(0, 0%, 65%);
+  --color-deco-primary: hsl(0, 0%, 65%);
+  --color-deco-secondary: hsl(0, 0%, 5%);
+  // --color-btn-white: hsl(0, 0%, 99%);
+
+  /* Espacios*/
+  --flow: 1rem;
+}

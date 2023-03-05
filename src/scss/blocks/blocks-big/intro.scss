@@ -1,0 +1,110 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.intro {
+  overflow-x: hidden;
+  &__text {
+    @include responsive(laptop) {
+      align-items: flex-start;
+      gap: 6rem;
+    }
+  }
+  &__img {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.2);
+    position: absolute;
+    left: 0;
+    top: 10%;
+    z-index: 1;
+    @include responsive(movilbig) {
+      position: relative;
+      transform: none;
+      height: 18rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include responsive(tablet) {
+      height: 20rem;
+      max-width: 500px;
+    }
+    @include responsive(laptop) {
+      top: 0;
+    }
+  }
+  &__image-container {
+    position: relative;
+    height: 16rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    @include responsive(movilbig) {
+      width: 100%;
+      margin-top: 6rem;
+      margin-bottom: 10rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include responsive(tablet) {
+      margin-top: 4rem;
+      margin-bottom: 8rem;
+      width: 60%;
+    }
+    @include responsive(laptop) {
+      margin-bottom: 10rem;
+      margin-top: 0;
+    }
+
+    &::before {
+      @include pseudo(90%, 140%) {
+        top: -15%;
+        left: 5%;
+        z-index: -1;
+        background-color: var(--color-bg-secondary);
+      }
+      @include responsive(movilbig) {
+        height: 170%;
+        width: 80%;
+        top: -10%;
+        left: 10%;
+      }
+      @include responsive(tablet) {
+        width: 70%;
+        height: 165%;
+        top: -5%;
+        left: 15%;
+      }
+      @include responsive(laptop) {
+        top: -15%;
+        height: 175%;
+        width: 65%;
+        left: 18%;
+      }
+    }
+    &::after {
+      @include pseudo(95%, 100%) {
+        top: 10%;
+        left: 2.5%;
+        z-index: 0;
+        border: 0.5px solid var(--color-menu-active);
+      }
+      @include responsive(movilbig) {
+        width: 90%;
+        height: 120%;
+        top: 20%;
+        left: 5%;
+      }
+      @include responsive(tablet) {
+        width: 80%;
+        height: 125%;
+        left: 10%;
+      }
+      @include responsive(laptop) {
+        width: 90%;
+        height: 120%;
+        left: 12%;
+      }
+    }
+  }
+}

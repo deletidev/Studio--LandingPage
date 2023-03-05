@@ -1,0 +1,34 @@
+@use '../../mixins/responsive.scss' as *;
+
+.footer {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-title);
+  &__policy {
+    font-size: var(--fs-sm);
+    justify-content: space-evenly;
+    padding-top: 1.2rem;
+    color: var(--color-menu-active);
+    gap: 1rem;
+    flex-wrap: wrap;
+    & li {
+      text-align: right;
+      width: 100%;
+      @include responsive(tablet) {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.copy {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-menu-active);
+}
+
+.menu-footer {
+  padding-bottom: 1rem;
+  color: var(--color-menu-active);
+}

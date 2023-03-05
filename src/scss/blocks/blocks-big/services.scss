@@ -1,0 +1,91 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.services {
+  --flow: 2rem;
+  overflow-x: hidden;
+  &__tablet {
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 3rem;
+    }
+  }
+  &__box {
+    position: relative;
+    padding-bottom: 2rem;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    &::before {
+      @include pseudo(30%, 65%) {
+        top: 0%;
+        right: -25%;
+        border: 1px solid var(--color-deco-primary);
+        @include responsive(laptop) {
+          right: -30%;
+        }
+      }
+    }
+    @include responsive(laptop) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: " one three" "two three";
+      gap: 3rem;
+      align-items: center;
+    }
+  }
+  &__service {
+    width: 80%;
+    max-width: 35ch;
+    margin-bottom: 4rem;
+    &--brand {
+      @include responsive(laptop) {
+        grid-area: three;
+      }
+    }
+  }
+  &__image-container {
+    position: relative;
+    height: 30rem;
+    @include responsive(tablet) {
+      height: auto;
+    }
+    &::after {
+      @include pseudo(50%, 60%) {
+        z-index: -2;
+        bottom: 1rem;
+        background-color: var(--color-deco-secondary);
+        @include responsive(tablet) {
+          top: 42%;
+          left: -12%;
+          height: 50%;
+          width: 60%;
+        }
+        @include responsive(laptop) {
+          top: 52%;
+          left: -15%;
+        }
+      }
+    }
+  }
+  &__img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    transform: scale(1.2);
+    position: relative;
+    top: -25%;
+    z-index: -1;
+    @include responsive(tablet) {
+      top: -2rem;
+      height: 90%;
+      width: 90%;
+      transform: none;
+    }
+    @include responsive(laptop) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

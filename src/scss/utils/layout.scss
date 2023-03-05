@@ -1,0 +1,37 @@
+@use "../mixins/responsive.scss" as *;
+.col-1 {
+  @include responsive(laptop) {
+    width: 100%;
+  }
+}
+.col-2 {
+  @include responsive(laptop) {
+    width: 50%;
+  }
+}
+.col-3 {
+  @include responsive(laptop) {
+    width: 33%;
+  }
+}
+.col-32 {
+  @include responsive(laptop) {
+    width: 66%;
+  }
+}
+
+.col-t-2 {
+  @include responsive(tablet) {
+    width: 50%;
+  }
+}
+.col-t-3 {
+  @include responsive(tablet) {
+    width: 33%;
+  }
+}
+.col-t-32 {
+  @include responsive(tablet) {
+    width: 66%;
+  }
+}

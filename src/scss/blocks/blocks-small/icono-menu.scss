@@ -1,0 +1,124 @@
+@use "../../mixins/hover.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+@use "../../mixins/responsive.scss" as *;
+
+.icono-menu {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 6px double var(--color-btn);
+  display: flex;
+  align-items: center;
+  padding: 0.35rem;
+  position: relative;
+  overflow: hidden;
+
+  &__line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-btn);
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+    &::before,
+    &::after {
+      @include pseudo(100%, 100%) {
+        width: 100%;
+        left: 0;
+        top: 0px;
+        height: 2px;
+        background-color: var(--color-btn);
+        border-radius: 10px;
+        transition: transform 1s ease-in-out;
+        transform: translateY(6px);
+      }
+    }
+    &::after {
+      transform: translateY(-6px);
+      // top: -6px;
+    }
+    &--close.icono-menu__line::before {
+      transform: translateY(0px);
+    }
+    &--close.icono-menu__line::after {
+      transform: translateY(-6px);
+    }
+    &--close.icono-menu__line::after {
+      transform: rotate(90deg);
+    }
+
+    &--close.icono-menu__line {
+      transform: rotate(45deg);
+    }
+  }
+  // &::after {
+  //   @include pseudo(100%, 100%) {
+  //     background-color: black;
+  //     border-radius: 50%;
+  //     left: 0;
+  //     z-index: 2;
+  //     clip-path: polygon(
+  //       -20% -20%,
+  //       120% -20%,
+  //       120% 120%,
+  //       -20% 120%,
+  //       25% 120%,
+  //       75% 120%,
+  //       120% 50%,
+  //       75% -20%,
+  //       25% -20%,
+  //       -20% 50%,
+  //       25% 120%,
+  //       -20% 120%
+  //     );
+
+  //     transition: clip-path 0.6s, transform 0.6s ease-in-out;
+  //   }
+  // }
+  &::before {
+    @include pseudo(100%, 100%) {
+      border-radius: 50%;
+      background-color: transparent;
+      left: 0;
+      z-index: 1;
+      transition: background-color 0.6s;
+    }
+  }
+  // &--active.icono-menu::after {
+  //   transform: rotate(0.25turn);
+  //   z-index: 2;
+  //   clip-path: polygon(
+  //     0% 0%,
+  //     100% 0%,
+  //     100% 100%,
+  //     0% 100%,
+  //     45% 60%,
+  //     55% 60%,
+  //     60% 50%,
+  //     55% 40%,
+  //     45% 40%,
+  //     40% 50%,
+  //     45% 60%,
+  //     0% 100%
+  //   );
+  // }
+  &--active.icono-menu::before {
+    background-color: white;
+  }
+
+  &__obturador {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    transform: scale(5);
+    transition: transform 0.6s;
+    background-color: transparent;
+  }
+  &--active .icono-menu__obturador {
+    transform: scale(1) rotate(45deg);
+  }
+  @include responsive(tablet) {
+    display: none;
+  }
+}

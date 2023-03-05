@@ -1,0 +1,28 @@
+@use "../../mixins/responsive.scss" as *;
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  &__background {
+    transition: background-color 0.6s ease-in-out;
+    background-color: transparent;
+    &--opacity {
+      background-color: hsla(0, 0%, 99%, 0.8);
+    }
+    &--active {
+      background-color: hsla(0, 0%, 99%, 1);
+    }
+  }
+  &__bar {
+    width: 100%;
+    left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__button {
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+}

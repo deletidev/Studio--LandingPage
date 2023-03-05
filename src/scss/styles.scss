@@ -1,4 +1,5 @@
-@use 'base/normalize.scss';
-@use 'base/initial-reset.scss';
-@use 'config/variables.scss';
-@use 'blocks/body.scss';
+@use "base/normalize.scss";
+@use "base/initial-reset.scss";
+@use "config/variables.scss";
+@use "blocks/blocks.scss";
+@use "utils/utils.scss";

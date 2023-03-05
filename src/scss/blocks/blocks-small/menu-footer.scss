@@ -1,0 +1,7 @@
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/hover.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
+
+.menu-footer {
+  text-align: left;
+}

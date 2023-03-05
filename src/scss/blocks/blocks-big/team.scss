@@ -1,0 +1,75 @@
+@use "../../mixins/responsive.scss" as *;
+@use "../../mixins/pseudo.scss" as *;
+
+.team {
+  overflow-x: hidden;
+  &__laptop {
+    @include responsive(laptop) {
+      gap: 6rem;
+    }
+  }
+  &__images {
+    margin-top: 4rem;
+    position: relative;
+    @include responsive(laptop) {
+      margin-top: 0;
+      top: -2.5rem;
+    }
+  }
+  &__image-container {
+    position: relative;
+    &::before {
+      @include pseudo(40%, 175%) {
+        border: 1px solid var(--color-deco-primary);
+        z-index: 1;
+        left: -18%;
+        top: -10%;
+        @include responsive(laptop) {
+          left: -10%;
+          width: 35%;
+          height: 165%;
+        }
+      }
+    }
+    &::after {
+      @include pseudo(40%, 40%) {
+        background-color: var(--color-deco-secondary);
+        bottom: -5%;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+  &__image {
+    position: relative;
+    object-fit: cover;
+    &--road {
+      width: 75%;
+      height: 25rem;
+      @include responsive(tablet) {
+        width: 60%;
+        height: 30rem;
+      }
+      @include responsive(laptop) {
+        width: 65%;
+      }
+    }
+    &--lake {
+      height: 13rem;
+      width: 90%;
+      transform: scale(1.2);
+      left: 23%;
+      top: -1.5rem;
+      @include responsive(tablet) {
+        width: 75%;
+        height: 16rem;
+      }
+      @include responsive(laptop) {
+        transform: none;
+        left: 12%;
+        width: 85%;
+        height: 15rem;
+      }
+    }
+  }
+}
