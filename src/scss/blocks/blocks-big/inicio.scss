@@ -1,17 +1,19 @@
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/pseudo.scss" as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
 
 .inicio {
   --flow: 0.7rem;
   height: 100vh;
+  min-height: 650px;
+  width: 100%;
   background-image: url(/assets/images/intro-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   justify-content: center;
   position: relative;
-
+  background-color: aqua;
   &__text {
     padding-top: 1.5rem;
     padding-bottom: 1.4rem;
@@ -24,7 +26,7 @@
     position: absolute;
     width: 40px;
     left: 50%;
-    bottom: 80px;
+    bottom: 100px;
     animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
       alternate both;
     @include responsive(laptop) {

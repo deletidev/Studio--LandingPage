@@ -1,5 +1,7 @@
-@use "../../mixins/responsive.scss" as *;
-
+@use '../../mixins/responsive.scss' as *;
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: var(--ff-main);
