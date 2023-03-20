@@ -1,0 +1,47 @@
+@use '../../mixins/responsive.scss' as *;
+
+.works {
+  &__scroll {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 3rem));
+    overflow: scroll;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 0 1.5rem;
+    align-items: flex-end;
+    height: 30rem;
+    margin-bottom: 2rem;
+    @include responsive(tablet) {
+      height: 38rem;
+      gap: 3rem;
+      grid-auto-columns: calc((100% - 4rem) / 2);
+      padding: 0 2rem;
+    }
+    @include responsive(laptop) {
+      height: 40rem;
+      grid-auto-columns: calc((100% - 4rem) / 3);
+      padding: 0 4rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+    @include responsive(tablet) {
+      --col-number: 3;
+      gap: 3.5rem;
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+  }
+  &__arrows {
+    cursor: pointer;
+  }
+  &__btn:disabled .works__arrows {
+    opacity: 0.3;
+  }
+}

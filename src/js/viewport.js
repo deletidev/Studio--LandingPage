@@ -1,9 +1,9 @@
 let vh = window.visualViewport.height;
-let ventana = document.getElementById('inicio');
+let homeStart = document.getElementById('home-start');
 
 const adjustWindow = () => {
   vh = window.visualViewport.height;
-  ventana.style.height = `${vh}px`;
+  homeStart.style.height = `${vh}px`;
 };
 
 export { adjustWindow };

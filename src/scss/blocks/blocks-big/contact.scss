@@ -1,9 +1,11 @@
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/pseudo.scss" as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
 
 .contact {
   --flow: 2rem;
   overflow: hidden;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   &__social-container {
     display: flex;
     flex-direction: column;

@@ -3,5 +3,12 @@
 @use '../../mixins/pseudo.scss' as *;
 
 .menu-footer {
-  text-align: left;
+  padding-bottom: 1rem;
+  &__item {
+    @include hover {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

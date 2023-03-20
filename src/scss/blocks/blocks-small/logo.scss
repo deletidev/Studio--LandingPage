@@ -9,7 +9,7 @@
     margin-bottom: 14px;
   }
 }
-.logo-inicio {
+.logo-home {
   width: 62%;
   max-width: 400px;
   height: auto;
@@ -22,14 +22,14 @@
 }
 
 .logo-footer {
-  max-height: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 4rem;
+  height: 80px;
+  padding-left: 1rem;
   @include responsive(tablet) {
     // max-height: 100px;
     margin-left: auto;
     margin-right: 0;
   }
-  &__decoration {
-  }
+  // &__decoration {
+  // }
 }

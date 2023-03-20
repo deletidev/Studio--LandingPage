@@ -1,0 +1,57 @@
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
+
+.clients {
+  padding-top: 2rem;
+  padding-bottom: 15rem;
+  @include responsive(tablet) {
+    padding-bottom: 8rem;
+  }
+  @include responsive(tablet) {
+    padding-top: 5rem;
+  }
+  &__img {
+    height: 30rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    filter: grayscale(100%);
+    @include responsive(tablet) {
+      width: 50%;
+      margin-left: 0;
+    }
+    @include responsive(laptop) {
+      width: 30%;
+      height: 35rem;
+    }
+    &-decoration {
+      position: relative;
+
+      &::before {
+        @include responsive(tablet) {
+          @include pseudo(50%, 20%) {
+            background-color: var(--color-deco-secondary);
+            top: 39%;
+            left: 20%;
+            z-index: -1;
+          }
+        }
+        @include responsive(laptop) {
+          @include pseudo(18%, 120%) {
+            top: -10%;
+            left: -4.8%;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    @include responsive(laptop) {
+      position: absolute;
+      left: 35%;
+      top: 4rem;
+    }
+  }
+}

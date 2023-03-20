@@ -31,5 +31,17 @@ const closeMenu = botonMenu => {
     headerBackg.classList.toggle('header__background--active');
   }
 };
-//* cosas repetidas fuera de la funcion??
-export { changeHeader, toggleMenu, closeMenu };
+
+const navCheck = entries => {
+  entries.forEach(entry => {
+    const idName = entry.target.id;
+    const activeAnchor = document.querySelector(`[rel=${idName}]`);
+    if (entry.isIntersecting) {
+      activeAnchor.classList.add('menu__item--active');
+    } else {
+      activeAnchor.classList.remove('menu__item--active');
+    }
+  });
+};
+
+export { changeHeader, toggleMenu, closeMenu, navCheck };

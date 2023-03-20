@@ -10,8 +10,8 @@
   --fs-xl: clamp(2.44rem, 1.44vw + 2.1rem, 3.26rem);
   --fs-xxl: clamp(3.05rem, 2.28vw + 2.52rem, 4.34rem);
   --fs-xxxl: clamp(3.81rem, 3.49vw + 3rem, 5.79rem);
-  --ff-title: "Bebas Neue", cursive;
-  --ff-main: "Source Sans Pro", sans-serif;
+  --ff-title: 'Bebas Neue', cursive;
+  --ff-main: 'Source Sans Pro', sans-serif;
   --fw-300: 300;
   --fw-400: 400;
   --fw-600: 600;
@@ -31,4 +31,6 @@
 
   /* Espacios*/
   --flow: 1rem;
+
+  --translate: 0;
 }

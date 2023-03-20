@@ -1,0 +1,62 @@
+@use '../../mixins/responsive.scss' as *;
+
+.testimonials {
+  position: absolute;
+  top: 23rem;
+  width: 100%;
+  @include responsive(tablet) {
+    width: 80%;
+    right: 0;
+    max-width: 600px;
+  }
+  @include responsive(laptop) {
+    width: 65%;
+    left: 35%;
+    top: 11rem;
+    max-width: 800px;
+  }
+  &__container {
+    border: 1px solid var(--color-deco-primary);
+    background-color: rgba(255, 255, 255, 0.95);
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    grid-auto-columns: 100%;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+  }
+  &__arrows {
+    margin-top: 0.6rem;
+    cursor: pointer;
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    &:disabled .testimonials__arrows {
+      opacity: 0.3;
+    }
+  }
+}
+.testimonial {
+  scroll-snap-align: center;
+  font-size: 1.125rem;
+  padding: 1.5rem;
+  &__opinion {
+    font-size: var(--fs-sm);
+    @include responsive(tablet) {
+      font-size: var(--fs-main);
+    }
+  }
+  &__img {
+    display: none;
+  }
+  &__name {
+    font-style: italic;
+    font-size: var(--fs-sm);
+  }
+}

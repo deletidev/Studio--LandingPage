@@ -1,15 +1,17 @@
-@forward "blocks-big/body.scss";
-@forward "blocks-big/header.scss";
-@forward "blocks-big/inicio.scss";
-@forward "blocks-big/intro.scss";
-@forward "blocks-big/services.scss";
-
-@forward "blocks-big/team.scss";
-@forward "blocks-big/contact.scss";
-@forward "blocks-big/footer.scss";
-@forward "blocks-small/logo.scss";
-@forward "blocks-small/icono-menu.scss";
-@forward "blocks-small/buttons.scss";
-@forward "blocks-small/menu-footer.scss";
-
-@forward "blocks-small/menu-ppal.scss";
+@forward 'blocks-big/body.scss';
+@forward 'blocks-big/header.scss';
+@forward 'blocks-big/home.scss';
+@forward 'blocks-big/intro.scss';
+@forward 'blocks-big/services.scss';
+@forward 'blocks-big/works.scss';
+@forward 'blocks-big/team.scss';
+@forward 'blocks-big/clients.scss';
+@forward 'blocks-big/contact.scss';
+@forward 'blocks-big/footer.scss';
+@forward 'blocks-small/logo.scss';
+@forward 'blocks-small/icono-menu.scss';
+@forward 'blocks-small/buttons.scss';
+@forward 'blocks-small/menu-footer.scss';
+@forward 'blocks-small/menu-ppal.scss';
+@forward 'blocks-small/testimonials.scss';
+@forward 'blocks-small/work.scss';

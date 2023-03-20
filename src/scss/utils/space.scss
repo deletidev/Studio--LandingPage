@@ -1,4 +1,4 @@
-@use "../mixins/responsive.scss" as *;
+@use '../mixins/responsive.scss' as *;
 
 .gap-s {
   gap: 1rem;
@@ -17,12 +17,13 @@
 }
 
 .padding-sections {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   @include responsive(tablet) {
     padding-bottom: 8rem;
   }
   @include responsive(laptop) {
+    padding-top: 8rem;
     padding-bottom: 9rem;
   }
 }

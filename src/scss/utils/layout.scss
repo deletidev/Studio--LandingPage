@@ -1,4 +1,4 @@
-@use "../mixins/responsive.scss" as *;
+@use '../mixins/responsive.scss' as *;
 .col-1 {
   @include responsive(laptop) {
     width: 100%;
@@ -34,4 +34,8 @@
   @include responsive(tablet) {
     width: 66%;
   }
+}
+
+.positon-relative {
+  position: relative;
 }

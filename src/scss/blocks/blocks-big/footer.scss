@@ -1,20 +1,72 @@
 @use '../../mixins/responsive.scss' as *;
-
+@use '../../mixins/pseudo.scss' as *;
+@use '../../mixins/hover.scss' as *;
 .footer {
+  overflow: hidden;
+  position: relative;
   background-color: var(--color-bg-primary);
-  color: var(--color-text-title);
+  color: hsl(0, 0%, 82%);
+  padding-block: 4rem;
+
   &__policy {
     font-size: var(--fs-sm);
     justify-content: space-evenly;
     padding-top: 1.2rem;
-    color: var(--color-menu-active);
-    gap: 1rem;
     flex-wrap: wrap;
     & li {
       text-align: right;
       width: 100%;
       @include responsive(tablet) {
-        width: 30%;
+        width: fit-content;
+      }
+    }
+    @include responsive(tablet) {
+      justify-content: start;
+      width: 75%;
+      margin-left: 25%;
+      gap: 3rem;
+    }
+    &-item {
+      @include hover {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__decoration {
+    position: relative;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 0;
+    margin-left: auto;
+    align-self: flex-end;
+    @include responsive(tablet) {
+      padding-bottom: 1.8rem;
+      margin-right: auto;
+      margin-left: 0;
+    }
+    &::after {
+      @include pseudo(400%, 200%) {
+        border: 1px solid var(--color-deco-primary);
+        z-index: 1;
+        left: 0%;
+        bottom: -5%;
+      }
+    }
+  }
+  &::before {
+    @include pseudo(55%, 47%) {
+      border: 1px solid var(--color-deco-primary);
+      z-index: 1;
+      left: -5%;
+      bottom: -5%;
+    }
+    @include responsive(tablet) {
+      @include pseudo(30%, 38%) {
+        z-index: 1;
+        left: -5%;
+        bottom: -5%;
       }
     }
   }
@@ -25,10 +77,5 @@
   padding-bottom: 0.5rem;
   font-size: 14px;
   background-color: var(--color-bg-secondary);
-  color: var(--color-menu-active);
-}
-
-.menu-footer {
-  padding-bottom: 1rem;
   color: var(--color-menu-active);
 }

@@ -1,6 +1,6 @@
-@use "../../mixins/responsive.scss" as *;
-@use "../../mixins/hover.scss" as *;
-@use "../../mixins/pseudo.scss" as *;
+@use '../../mixins/responsive.scss' as *;
+@use '../../mixins/hover.scss' as *;
+@use '../../mixins/pseudo.scss' as *;
 
 .menu {
   display: flex;
@@ -76,19 +76,20 @@
       padding-right: 1rem;
       padding-left: 1rem;
       background-color: transparent;
-    }
-    @include hover {
-      &:hover {
-        --color-menu-active: hsl(0, 0%, 45%);
-        color: var(--color-menu-active);
-        &::before {
-          @include pseudo(40%, 54%) {
-            left: 30%;
-            border-bottom: 2px solid #737373;
+      @include hover {
+        &:hover {
+          --color-menu-active: hsl(0, 0%, 45%);
+          color: var(--color-menu-active);
+          &::before {
+            @include pseudo(40%, 54%) {
+              left: 30%;
+              border-bottom: 2px solid #737373;
+            }
           }
         }
       }
     }
+
     &--active {
       width: 85%;
       margin-left: auto;
