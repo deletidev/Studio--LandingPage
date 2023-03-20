@@ -12,6 +12,9 @@
   background-position: center center;
   justify-content: center;
   position: relative;
+  @include responsive(1800px) {
+    background-position: top center;
+  }
   &__text {
     padding-top: 1.5rem;
     padding-bottom: 1.4rem;
