@@ -1,19 +1,18 @@
-# Password-generator
+# Studio-ProyectoFinalTrazos
 
-![Imagen del proyecto](src/assets/images/password-generator.jpg)
+![Imagen del proyecto](src/assets/images/studio.jpg)
 
 ## Ejemplo en vivo
 
-- [Ver página](https://password-generator-aqie.onrender.com)
-
+- [Ver página](https://studio-d63s.onrender.com/)
 
 ## Descripción 📑
 
-Página web generadora de contraseñas aleatorias.
+Landing page de un estudio fotográfico, proyecto ficticio diseñado y desarrollado por mi.
 
 ## ¿Qué he aprendido en este proyecto? 🙇🏻
 
-Con este desafío he consolidado mis consocimientos de JS, y como mejorar mi lógica en el desarrollo.
+Con el he aprendido a controlar los colores, a crear carruseles responsive apoyándome en las nuevas propiedades de CSS y con muy poquito de Javascript
 
 ## Tecnologías 🛠
 
@@ -23,8 +22,7 @@ Con este desafío he consolidado mis consocimientos de JS, y como mejorar mi ló
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://es.wikipedia.org/wiki/CSS)
 [![SCSS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://es.wikipedia.org/wiki/Sass)
 [![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://es.wikipedia.org/wiki/JavaScript)
-[![VITE](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://en.wikipedia.org/wiki/Vite_(software))
-	
+[![VITE](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](<https://en.wikipedia.org/wiki/Vite_(software)>)
 
 <!--  ## Vista previa del proyecto
 
