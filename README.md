@@ -1,4 +1,4 @@
-# Studio-ProyectoFinalTrazos
+# Studio--ProyectoFinalTrazos
 
 ![Imagen del proyecto](src/assets/images/studio.jpg)
 
