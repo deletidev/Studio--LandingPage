@@ -1,4 +1,4 @@
-# Studio--ProyectoFinalTrazos
+# Studio--LandingPage
 
 ![Imagen del proyecto](src/assets/images/studio.jpg)
 
