@@ -6,7 +6,10 @@
   height: 100vh;
   min-height: 650px;
   width: 100%;
-  background-image: url(/assets/images/intro-bg.jpg);
+  background-image: url(/assets/images/intro-bg-movil.jpg);
+  @include responsive(tablet) {
+    background-image: url(/assets/images/intro-bg.jpg);
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
